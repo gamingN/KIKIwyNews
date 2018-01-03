@@ -20,6 +20,8 @@ import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
 /**
+ * 管理所有Activity操作，子类重写getLayoutId来返回布局，
+ * 还有setoolbar，管理subscription的容器
  * Created by Administrator on 2017/12/20.
  */
 
