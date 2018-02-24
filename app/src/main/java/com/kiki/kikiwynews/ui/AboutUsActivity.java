@@ -1,14 +1,12 @@
-package com.kiki.kikiwynews;
+package com.kiki.kikiwynews.ui;
 
-import android.support.v7.widget.Toolbar;
-
-import butterknife.OnClick;
+import com.kiki.kikiwynews.R;
 
 /**
  * Created by Administrator on 2017/12/22.
  */
 
-public class AboutUsActivity extends ToolbarBaseActivity{
+public class AboutUsActivity extends ToolbarBaseActivity {
     @Override
     protected void initUI() {
         tvToolbarTitle.setText("关于我们");

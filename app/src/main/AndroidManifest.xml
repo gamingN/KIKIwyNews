@@ -20,7 +20,6 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".SplashActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,11 +33,11 @@
 
         </activity>
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".ui.AboutUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HalfTranslucent" />
 
-        <activity android:name=".FeedbackActivity"
+        <activity android:name=".ui.FeedbackActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HalfTranslucent"
             />
@@ -46,6 +45,28 @@
             android:name=".webview.WebViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/windowTranslucentMovieTop"/>
+
+        <activity android:name=".ui.ZhiHuCommentAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/windowTranslucentMovieTop"
+            />
+
+        <activity android:name=".ui.ZhiHuDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HalfTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
+
+        <activity android:name=".ui.HomeAdjustmentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/windowTranslucentMovieTop"
+            />
+
+        <activity android:name=".ui.ZhihuThemeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HalfTranslucent"
+            />
 
     </application>
 

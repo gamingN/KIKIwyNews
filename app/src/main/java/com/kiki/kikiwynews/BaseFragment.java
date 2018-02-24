@@ -100,7 +100,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
      * 注意声明isPrepared，先初始化
      * 在onActivityCreated之后第一次显示加载数据，只加载一次
      */
-    private void onVisible() {
+    protected void onVisible() {
         if(isFirst){
             initInject();
             if(mPresenter!=null){
@@ -115,7 +115,7 @@ public abstract class BaseFragment<P extends BasePresenter> extends Fragment imp
      */
     protected abstract void initInject();
 
-    private void onInvisible() {}
+    protected void onInvisible() {}
 
     public void loadBaseData() {
         if(!mIsVisible || !isPrepared || !isFirst){

@@ -19,7 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.blankj.utilcode.utils.ToastUtils;
-import com.kiki.kikiwynews.BaseActivity;
+import com.kiki.kikiwynews.ui.BaseActivity;
 import com.kiki.kikiwynews.R;
 import com.kiki.kikiwynews.utils.CommonUtils;
 
@@ -364,9 +364,11 @@ public class WebViewActivity extends BaseActivity implements IWebPageView{
         super.onResume();
         webView.onResume();
         webView.resumeTimers();
-
+        /**
+         * 设置横竖屏
+         */
         if(getRequestedOrientation()!=ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE){
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
     }
 

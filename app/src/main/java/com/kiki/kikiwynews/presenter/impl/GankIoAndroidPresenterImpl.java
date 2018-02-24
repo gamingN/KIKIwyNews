@@ -42,7 +42,7 @@ public class GankIoAndroidPresenterImpl extends BasePresenter<GankIoAndroidPrese
                 List<GankIoDataBean.ResultBean> results=data.getResults();
                 checkState(results);
                 /**
-                 * mView为Androidfragment
+                 * mView为Androidfragment，p层调用v层显示数据
                  */
                 mView.refreshView(results);
             }

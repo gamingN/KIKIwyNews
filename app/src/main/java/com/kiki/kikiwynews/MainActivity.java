@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
@@ -16,13 +15,20 @@ import android.view.MotionEvent;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
 
+import com.blankj.utilcode.utils.SPUtils;
 import com.blankj.utilcode.utils.ToastUtils;
-import com.kiki.kikiwynews.adapter.HomeFragmentPageAdapter;
+import com.kiki.kikiwynews.adapter.KiFragmentPageAdapter;
 import com.kiki.kikiwynews.app.AppConstants;
 import com.kiki.kikiwynews.injector.component.ActivityComponent;
 import com.kiki.kikiwynews.injector.component.DaggerActivityComponent;
 import com.kiki.kikiwynews.injector.module.ActivityModule;
+import com.kiki.kikiwynews.rx.RxBus;
+import com.kiki.kikiwynews.ui.AboutUsActivity;
 import com.kiki.kikiwynews.ui.AndroidFragment;
+import com.kiki.kikiwynews.ui.BaseActivity;
+import com.kiki.kikiwynews.ui.FeedbackActivity;
+import com.kiki.kikiwynews.ui.HomeFragment;
+import com.kiki.kikiwynews.ui.RightFragment;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
 import java.util.ArrayList;
@@ -32,7 +38,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity{
+public class MainActivity extends BaseActivity {
 
     @BindView(R.id.fl_title_menu)
     FrameLayout nvMenu;
@@ -89,12 +95,18 @@ public class MainActivity extends BaseActivity{
         ButterKnife.bind(this);
         setToolbar(tbToolbar,"",false);
         initView();
+        //初始化首页栏目顺序
+        SPUtils spUtils = new SPUtils("home_list");
+        if (!spUtils.getBoolean("home_list_boolean")) {
+            spUtils.putString("home_list", "知乎日报&&知乎热门&&知乎主题&&知乎专栏&&");
+            spUtils.putBoolean("home_list_boolean", true);
+        }
 
         searchView.setOnQueryTextListener(new MaterialSearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 vpContent.setCurrentItem(1);
-//                RxBus.getDefault().post(AppConstants.WECHA_SEARCH, query);
+                RxBus.getDefault().post(AppConstants.WECHA_SEARCH, query);
                 return false;
             }
 
@@ -111,7 +123,7 @@ public class MainActivity extends BaseActivity{
             public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
                 switch (checkedId){
                     case R.id.rb_home_pager:
-                        vpContent.setCurrentItem(0);//为了不造成资源浪费，adapter默认从首页开始加载
+                        vpContent.setCurrentItem(0);
                         break;
                     case R.id.rb_music_pager:
                         vpContent.setCurrentItem(1);
@@ -125,10 +137,12 @@ public class MainActivity extends BaseActivity{
 
         List<Fragment> mFragmentList=new ArrayList<>();
         mFragmentList.add(new AndroidFragment());
+        mFragmentList.add(new HomeFragment());
+        mFragmentList.add(new RightFragment());
 
+        vpContent.setAdapter(new KiFragmentPageAdapter(getSupportFragmentManager(),mFragmentList));
 
-        vpContent.setAdapter(new HomeFragmentPageAdapter(getSupportFragmentManager(),mFragmentList));
-        vpContent.setCurrentItem(0);
+        vpContent.setCurrentItem(1);
 
         vpContent.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override

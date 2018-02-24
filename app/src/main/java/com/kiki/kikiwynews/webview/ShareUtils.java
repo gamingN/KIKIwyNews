@@ -10,6 +10,14 @@ import android.net.Uri;
  */
 
 public class ShareUtils {
+
+    public static void shareText(Context context,String text,String title){
+        Intent intent=new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT,text);
+        context.startActivity(Intent.createChooser(intent,title));
+    }
+
     /**
      * 分享到的代码
      */

@@ -125,6 +125,7 @@ public abstract class LoadingPage extends FrameLayout{
                 addView(successView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
                 initView();
             }
+            successView.setVisibility(VISIBLE);
         }
     }
 

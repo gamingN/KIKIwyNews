@@ -1,4 +1,4 @@
-package com.kiki.kikiwynews;
+package com.kiki.kikiwynews.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.kiki.kikiwynews.R;
+import com.kiki.kikiwynews.ui.BaseActivity;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

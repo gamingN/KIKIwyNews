@@ -1,4 +1,4 @@
-package com.kiki.kikiwynews;
+package com.kiki.kikiwynews.utils;
 
 import android.app.Activity;
 

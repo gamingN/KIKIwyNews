@@ -3,4 +3,9 @@
     <string name="about_author">kiki</string>
     <string name="about_project">....................</string>
     <string name="about_addr">346409606</string>
+    <string name="zhihu_detail_title">zhihu_detail_title</string>
+    <string name="detail_bottom_commit">评论</string>
+    <string name="detail_bottom_share">分享</string>
+    <string name="detail_bottom_like">点赞</string>
+    <string name="zhihu_theme">zhihu_theme</string>
 </resources>

@@ -1,12 +1,15 @@
-package com.kiki.kikiwynews;
+package com.kiki.kikiwynews.ui;
 
 import android.view.View;
+
+import com.kiki.kikiwynews.utils.LoginUtils;
+import com.kiki.kikiwynews.R;
 
 /**
  * Created by Administrator on 2017/12/21.
  */
 
-public class FeedbackActivity extends ToolbarBaseActivity{
+public class FeedbackActivity extends ToolbarBaseActivity {
     @Override
     protected void initUI() {
         tvToolbarTitle.setText("意见反馈");

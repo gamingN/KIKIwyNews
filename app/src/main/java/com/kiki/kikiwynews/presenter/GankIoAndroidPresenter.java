@@ -5,6 +5,7 @@ import com.kiki.kikiwynews.bean.GankIoDataBean;
 import java.util.List;
 
 /**
+ * mvp中的契约类
  * 包含一个接口View，一个接口Presenter
  * AndroidFragment分别实现了里面的2个接口
  * Created by KIKI on 2017/12/25.

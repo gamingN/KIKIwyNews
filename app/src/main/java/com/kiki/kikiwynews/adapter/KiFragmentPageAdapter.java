@@ -12,18 +12,18 @@ import java.util.List;
  * 346409606@qq.com
  */
 
-public class HomeFragmentPageAdapter extends FragmentPagerAdapter {
+public class KiFragmentPageAdapter extends FragmentPagerAdapter {
 
     private List<Fragment> fragmentList;
     private List<String> mTitleList;
 
 
-    public HomeFragmentPageAdapter(FragmentManager fm,List<Fragment> fragmentList) {
+    public KiFragmentPageAdapter(FragmentManager fm, List<Fragment> fragmentList) {
         super(fm);
         this.fragmentList=fragmentList;
     }
 
-    public HomeFragmentPageAdapter(FragmentManager fm,List<Fragment> fragmentList,List<String> mTitleList){
+    public KiFragmentPageAdapter(FragmentManager fm, List<Fragment> fragmentList, List<String> mTitleList){
         super(fm);
         this.fragmentList=fragmentList;
         this.mTitleList=mTitleList;

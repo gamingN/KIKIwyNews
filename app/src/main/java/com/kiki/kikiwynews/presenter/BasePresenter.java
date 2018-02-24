@@ -14,7 +14,8 @@ import java.util.List;
 import rx.Observable;
 
 /**
- * presenter的基类，封装attachView(LifeSubscription mLifeSubscription)，
+ * presenter的基类(属于类，与presenter有点区别)
+ * 封装attachView(LifeSubscription mLifeSubscription)，
  * invoke(Observable<T> observable,Callback<T> callback)，
  * checkState(List list)，detachView()
  * Created by Administrator on 2017/12/25.

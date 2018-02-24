@@ -9,8 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/iv_splash_pic"
+        android:scaleType="fitXY"
         />
-
+    <!--设置缩放可以到达图片全屏效果-->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="70dp"

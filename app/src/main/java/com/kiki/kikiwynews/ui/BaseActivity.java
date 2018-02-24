@@ -1,4 +1,4 @@
-package com.kiki.kikiwynews;
+package com.kiki.kikiwynews.ui;
 
 import android.animation.Animator;
 import android.animation.ValueAnimator;
@@ -12,6 +12,9 @@ import android.view.MotionEvent;
 import android.view.VelocityTracker;
 import android.view.View;
 import android.view.Window;
+
+import com.kiki.kikiwynews.LifeSubscription;
+import com.kiki.kikiwynews.R;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -96,7 +99,7 @@ public abstract class BaseActivity extends AppCompatActivity implements LifeSubs
     //管理subscription的容器
     private CompositeSubscription mCompositeSubscription;
 
-    //取消订阅
+    //订阅
     @Override
     public void bindSubscription(Subscription subscription) {
         if (this.mCompositeSubscription == null) {
