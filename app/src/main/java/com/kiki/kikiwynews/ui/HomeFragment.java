@@ -65,8 +65,6 @@ public class HomeFragment extends BaseFragment{
         mTitleLists.add("最新电影");
 
         mFragmentLists.add(new ZhiHuHomeFragment());
-        mFragmentLists.add(new ZhiHuHomeFragment());
-        mFragmentLists.add(new ZhiHuHomeFragment());
-        mFragmentLists.add(new ZhiHuHomeFragment());
+
     }
 }
