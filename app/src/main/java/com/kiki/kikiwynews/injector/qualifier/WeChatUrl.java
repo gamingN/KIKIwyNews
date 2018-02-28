@@ -1,4 +1,4 @@
-package com.kiki.kikiwynews.injector;
+package com.kiki.kikiwynews.injector.qualifier;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;

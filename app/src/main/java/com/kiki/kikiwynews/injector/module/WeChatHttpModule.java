@@ -1,7 +1,7 @@
 package com.kiki.kikiwynews.injector.module;
 
 import com.kiki.kikiwynews.http.service.WeChatService;
-import com.kiki.kikiwynews.injector.WeChatUrl;
+import com.kiki.kikiwynews.injector.qualifier.WeChatUrl;
 
 import javax.inject.Singleton;
 
