@@ -47,7 +47,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@null"
-                    android:drawableTop="@drawable/titlebar_disco" />
+                    android:drawableTop="@drawable/left_radiobutton"
+                    android:paddingTop="7dp"
+                    android:paddingRight="20dp"
+                    />
 
                 <RadioButton
                     android:id="@+id/rb_music_pager"
@@ -55,14 +58,21 @@
                     android:layout_height="wrap_content"
                     android:button="@null"
                     android:checked="true"
-                    android:drawableTop="@drawable/titlebar_music" />
+                    android:drawableTop="@drawable/middle_radiobutton"
+                    android:paddingTop="7dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    />
 
                 <RadioButton
                     android:id="@+id/rb_friend_pager"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@null"
-                    android:drawableTop="@drawable/titlebar_friends" />
+                    android:drawableTop="@drawable/right_radiobutton"
+                    android:paddingTop="7dp"
+                    android:paddingLeft="20dp"
+                    />
 
             </RadioGroup>
         </android.support.v7.widget.Toolbar>

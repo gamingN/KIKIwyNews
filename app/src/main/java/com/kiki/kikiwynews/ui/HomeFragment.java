@@ -61,10 +61,11 @@ public class HomeFragment extends BaseFragment{
         }
         mTitleLists.add("知乎日报");
         mTitleLists.add("头条新闻");
-        mTitleLists.add("最新电影");
+        mTitleLists.add("豆瓣电影");
 
         mFragmentLists.add(new ZhiHuHomeFragment());
         mFragmentLists.add(new TopnewsFragment());
+        mFragmentLists.add(new DoubanLMFragment());
 
     }
 }

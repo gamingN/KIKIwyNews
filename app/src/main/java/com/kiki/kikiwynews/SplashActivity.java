@@ -41,7 +41,7 @@ public class SplashActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bind = ButterKnife.bind(this);
-        ivsplashPic.setImageResource(R.mipmap.splashc);
+        ivsplashPic.setImageResource(R.mipmap.splash_bg);
 
         handler=new Handler();
 

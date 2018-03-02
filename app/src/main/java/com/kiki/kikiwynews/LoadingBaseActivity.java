@@ -24,6 +24,7 @@ public abstract class LoadingBaseActivity<T extends BasePresenter> extends BaseA
 
     @Inject
     protected T mPresenter;
+
     private Unbinder bind;
     protected FrameLayout flBaseContent;
 
