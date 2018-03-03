@@ -49,7 +49,6 @@ public class ZhiHuPresenterImpl extends BasePresenter<ZhihuPresenter.View> imple
         int section = 0;
         SPUtils spUtils = new SPUtils("home_list");
         String homeListString = spUtils.getString("home_list");
-        Log.e("KIKI", "getHomeList:"+homeListString);
         String[] split = homeListString.split("&&");
 
         for (int i = 0; i < split.length; i++) {
@@ -88,7 +87,6 @@ public class ZhiHuPresenterImpl extends BasePresenter<ZhihuPresenter.View> imple
                 continue;
             }
         }
-        Log.e("KIKI", "getHomeList: success");
         return newHomeList;
     }
 
