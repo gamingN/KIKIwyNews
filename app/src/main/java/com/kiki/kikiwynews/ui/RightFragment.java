@@ -59,6 +59,9 @@ public class RightFragment extends BaseFragment {
             return;
         }
         mTitleList.add("wechat");
+        mTitleList.add("轻松一刻");
         mFragments.add(new WeChatFragment());
+        mFragments.add(new RelaxFragment());
+
     }
 }
