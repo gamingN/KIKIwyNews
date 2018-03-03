@@ -2,17 +2,24 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kiki.kikiwynews">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
+        android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/news1"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,14 +27,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".ui.AboutUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HalfTranslucent" />
 
-        <activity android:name=".FeedbackActivity"
+        <activity android:name=".ui.FeedbackActivity"
             android:screenOrientation="portrait"
             android:theme="@style/HalfTranslucent"
             />
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/windowTranslucentMovieTop"/>
+
+        <activity android:name=".ui.ZhiHuCommentAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/windowTranslucentMovieTop"
+            />
+
+        <activity android:name=".ui.ZhiHuDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/HalfTranslucent"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            />
+
+        <activity android:name=".ui.HomeAdjustmentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/windowTranslucentMovieTop"
+            />
+
+        <activity android:name=".ui.ZhihuThemeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HalfTranslucent"
+            />
+
+        <activity android:name=".ui.MovieDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HalfTranslucent"
+            />
+
     </application>
 
 </manifest>

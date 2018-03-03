@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/ll_drawerjpg"
-            android:background="@mipmap/timg"
+            android:background="@mipmap/timg_ki"
             android:orientation="vertical"
             >
 
